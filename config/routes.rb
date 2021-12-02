@@ -20,6 +20,8 @@ Rails.application.routes.draw do
       resources :tasks, only: [:index]
     end
 
+    resources :employees, only: [:index]
+
     resources :polls do
       scope module: :polls do
         resources :questions
