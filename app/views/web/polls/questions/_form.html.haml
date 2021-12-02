@@ -7,18 +7,12 @@
           %li= msg
 
   .field
-    = f.label :title
-    = f.text_field :title
+    = f.label :text
+    = f.text_field :text
 
   .field
     = f.label :description
     = f.text_field :description
-
-  .field
-    = f.label :published
-    = f.check_box :published
-  .actions
-    = f.submit 'Save'
 
   .actions
     = f.submit 'Save'

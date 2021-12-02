@@ -3,14 +3,19 @@ class Web::PollsController < Web::ApplicationController
 
   # GET /polls
   def index
+    add_breadcrumbs(polls_path, "Опросы")
     @polls = Poll.all
   end
 
   # GET /polls/1
-  def show; end
+  def show
+    add_breadcrumbs(polls_path, @poll.title)
+  end
 
   # GET /polls/new
   def new
+    add_breadcrumbs(polls_path, "Опросы")
+    add_breadcrumbs(polls_path, "Новый опрос")
     @poll = Poll.new
   end
 
@@ -47,6 +52,7 @@ class Web::PollsController < Web::ApplicationController
 
   def set_poll
     @poll = Poll.find(params[:id])
+    add_breadcrumbs(polls_path, "Опросы")
   end
 
   def poll_params

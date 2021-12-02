@@ -10,6 +10,8 @@
   %b Questions:
   = @poll.poll_questions.count
 
+= render partial: "polls/questions/list", poll_questions: @poll.poll_questions
+
 = link_to 'Edit', edit_poll_path(@poll)
 \|
 = link_to 'Back', polls_path

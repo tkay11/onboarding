@@ -1,14 +1,15 @@
-%h1 PollQuestions#index
+.panel
+  .user-card
+    .user-card__body
+      %p.user-card__title
+        = @poll.title
+      %p.user-card__position
+        = @poll.description
 
-
-%p
-  %b Title:
-  = @poll.title
-%p
-  %b Description
-  = @poll.description
 %p
   %b Questions:
-  = @poll.poll_questions.count
+  = @poll_questions.count
 
-%p Find me in app/views/polls/questions/index.html.haml
+= render "list"
+
+= link_to 'New question', new_poll_question_path(@poll)

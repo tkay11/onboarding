@@ -4,7 +4,7 @@ class Web::Polls::QuestionsController < Web::ApplicationController
   prepend_view_path 'web/polls/questions'
 
   def index
-    @poll_questions = PollQuestion.all
+    @poll_questions = PollQuestion.where(poll: @poll)
   end
 
   # GET /poll_questions/1
@@ -20,10 +20,11 @@ class Web::Polls::QuestionsController < Web::ApplicationController
 
   # POST /poll_questions
   def create
-    @poll_question = PollQuestion.new(poll_question_params)
+    args = poll_question_params.merge(poll: @poll)
+    @poll_question = PollQuestion.new(args)
 
     if @poll_question.save
-      redirect_to @poll_question, notice: 'Poll question was successfully created.'
+      redirect_to poll_question_path(@poll), notice: 'Poll question was successfully created.'
     else
       render :new
     end
@@ -31,7 +32,8 @@ class Web::Polls::QuestionsController < Web::ApplicationController
 
   # PATCH/PUT /poll_questions/1
   def update
-    if @poll_question.update(poll_question_params)
+    args = poll_question_params.merge(poll: @poll)
+    if @poll_question.update(args)
       redirect_to @poll_question, notice: 'Poll question was successfully updated.'
     else
       render :edit
@@ -54,6 +56,7 @@ class Web::Polls::QuestionsController < Web::ApplicationController
 
   def set_poll
     @poll = Poll.find(params[:poll_id])
+    add_breadcrumbs(polls_path, "Опросы")
   end
 
   # Only allow a list of trusted parameters through.

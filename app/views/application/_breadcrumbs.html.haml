@@ -1,6 +1,6 @@
 .breadcrumbs
   %ul
-    %li
-      %a{href: "/"} Главная
-    %li
-      %a.current{href: "#"} Эта страница
+    - @breadcrumbs.each_with_index do |item, index|
+      %li
+        - last = index == (@breadcrumbs.size - 1)
+        = link_to item[:name], item[:url], class: last ? "current" : ""

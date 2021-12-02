@@ -1,0 +1,7 @@
+%p
+- @poll_questions.each do |quest|
+  .panel.panel--padding
+    %p
+      = quest.text
+    %p
+      = quest.description

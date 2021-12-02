@@ -24,6 +24,9 @@ module App
 
     config.exceptions_app = routes
 
+    config.assets.configure do |env|
+        env.export_concurrent = false
+    end
     config.generators do |g|
       g.template_engine :haml
       g.test_framework :test_unit, fixture: false
