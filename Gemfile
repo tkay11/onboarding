@@ -20,7 +20,7 @@ gem 'image_processing'
 gem 'russian'
 gem 'state_machines-activerecord'
 gem 'validates'
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+# gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 gem 'bootstrap', '~> 4.4.1'
 gem 'font_awesome5_rails'
