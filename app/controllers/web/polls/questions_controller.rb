@@ -1,7 +1,8 @@
-class PollQuestionsController < ApplicationController
+class Web::Polls::QuestionsController < Web::ApplicationController
+  before_action :set_poll
   before_action :set_poll_question, only: %i[show edit update destroy]
+  prepend_view_path 'web/polls/questions'
 
-  # GET /poll_questions
   def index
     @poll_questions = PollQuestion.all
   end
@@ -47,8 +48,12 @@ class PollQuestionsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_poll_question
-    @poll = Poll.find(params[:poll_id]) if params[:poll_id].present?
+    set_poll if params[:poll_id].present?
     @poll_question = PollQuestion.find(params[:id])
+  end
+
+  def set_poll
+    @poll = Poll.find(params[:poll_id])
   end
 
   # Only allow a list of trusted parameters through.

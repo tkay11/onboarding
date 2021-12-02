@@ -1,5 +1,5 @@
-class PollsController < ApplicationController
-  before_action :set_poll, only: [:show, :edit, :update, :destroy]
+class Web::PollsController < Web::ApplicationController
+  before_action :set_poll, only: %i[show edit update destroy]
 
   # GET /polls
   def index
@@ -7,8 +7,7 @@ class PollsController < ApplicationController
   end
 
   # GET /polls/1
-  def show
-  end
+  def show; end
 
   # GET /polls/new
   def new
@@ -16,8 +15,7 @@ class PollsController < ApplicationController
   end
 
   # GET /polls/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /polls
   def create
@@ -46,13 +44,12 @@ class PollsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_poll
-      @poll = Poll.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def poll_params
-      params.require(:poll).permit(:title, :created_by, :published)
-    end
+  def set_poll
+    @poll = Poll.find(params[:id])
+  end
+
+  def poll_params
+    params.require(:poll).permit(:title, :description)
+  end
 end

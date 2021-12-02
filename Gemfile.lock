@@ -9,6 +9,8 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (5.2.0)
+      concurrent-ruby (~> 1.0)
     actioncable (6.1.4.1)
       actionpack (= 6.1.4.1)
       activesupport (= 6.1.4.1)
@@ -267,13 +269,6 @@ GEM
     sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    state_machines (0.5.0)
-    state_machines-activemodel (0.8.0)
-      activemodel (>= 5.1)
-      state_machines (>= 0.5.0)
-    state_machines-activerecord (0.8.0)
-      activerecord (>= 5.1)
-      state_machines-activemodel (>= 0.8.0)
     temple (0.8.2)
     thor (1.1.0)
     tilt (2.0.10)
@@ -297,6 +292,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm
   active_link_to
   bcrypt
   bootsnap (>= 1.4.2)
@@ -327,7 +323,6 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
-  state_machines-activerecord
   validates
   web-console (>= 3.3.0)
 

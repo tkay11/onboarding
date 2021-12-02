@@ -4,11 +4,11 @@
   %b Title:
   = @poll.title
 %p
-  %b Created by:
-  = @poll.created_by
+  %b Description
+  = @poll.description
 %p
-  %b Published:
-  = @poll.published
+  %b Questions:
+  = @poll.poll_questions.count
 
 = link_to 'Edit', edit_poll_path(@poll)
 \|

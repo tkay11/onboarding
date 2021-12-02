@@ -1,0 +1,14 @@
+%h1 PollQuestions#index
+
+
+%p
+  %b Title:
+  = @poll.title
+%p
+  %b Description
+  = @poll.description
+%p
+  %b Questions:
+  = @poll.poll_questions.count
+
+%p Find me in app/views/polls/questions/index.html.haml

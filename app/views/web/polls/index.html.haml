@@ -4,18 +4,18 @@
   %thead
     %tr
       %th Title
-      %th Created by
-      %th Published
-      %th
-      %th
-      %th
+      %th 1
+      %th 2
+      %th 3
+      %th 4
+      %th 5
 
   %tbody
     - @polls.each do |poll|
       %tr
         %td= poll.title
-        %td= poll.created_by
-        %td= poll.published
+        %td= poll.description
+        %td= poll.poll_questions.count
         %td= link_to 'Show', poll
         %td= link_to 'Edit', edit_poll_path(poll)
         %td= link_to 'Destroy', poll, :method => :delete, :data => { :confirm => 'Are you sure?' }

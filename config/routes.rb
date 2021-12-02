@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  resources :polls do
-    resources :questions
-  end
-
   scope module: :web do
     root to: 'welcome#index'
 
@@ -22,6 +18,12 @@ Rails.application.routes.draw do
         get :third_week
       end
       resources :tasks, only: [:index]
+    end
+
+    resources :polls do
+      scope module: :polls do
+        resources :questions
+      end
     end
   end
 end
