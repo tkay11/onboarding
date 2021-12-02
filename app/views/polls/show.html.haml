@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @poll.title
+%p
+  %b Created by:
+  = @poll.created_by
+%p
+  %b Published:
+  = @poll.published
+
+= link_to 'Edit', edit_poll_path(@poll)
+\|
+= link_to 'Back', polls_path

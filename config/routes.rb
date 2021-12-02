@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :polls do
+    resources :questions
+  end
+
   scope module: :web do
     root to: 'welcome#index'
 

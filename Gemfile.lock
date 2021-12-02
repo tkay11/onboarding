@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 27bef252eb378f8910d4966263f6cda2db73727b
+  branch: master
+  specs:
+    faker (2.19.0)
+      i18n (>= 1.8.11, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -129,6 +137,11 @@ GEM
       temple (>= 0.8.2)
       thor
       tilt
+    hamlit-rails (0.2.3)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      hamlit (>= 1.2.0)
+      railties (>= 4.0.1)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.1)
@@ -297,8 +310,10 @@ DEPENDENCIES
   draper
   enumerize
   factory_bot_rails
+  faker!
   font_awesome5_rails
   hamlit
+  hamlit-rails
   image_processing
   jquery-rails
   listen (~> 3.2)
