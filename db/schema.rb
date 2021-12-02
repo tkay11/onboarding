@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_02_200947) do
+ActiveRecord::Schema.define(version: 2021_12_02_200949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,22 @@ ActiveRecord::Schema.define(version: 2021_12_02_200947) do
     t.index ["email"], name: "index_employees_on_email", unique: true
   end
 
+  create_table "onboarding_step_tasks", force: :cascade do |t|
+    t.bigint "onboarding_step_id", null: false
+    t.string "name"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["onboarding_step_id"], name: "index_onboarding_step_tasks_on_onboarding_step_id"
+  end
+
+  create_table "onboarding_steps", force: :cascade do |t|
+    t.string "name"
+    t.string "period"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "projects", force: :cascade do |t|
     t.bigint "company_id", null: false
     t.string "name"
@@ -80,6 +96,7 @@ ActiveRecord::Schema.define(version: 2021_12_02_200947) do
   add_foreign_key "employee_teams", "employees"
   add_foreign_key "employee_teams", "teams"
   add_foreign_key "employees", "companies"
+  add_foreign_key "onboarding_step_tasks", "onboarding_steps"
   add_foreign_key "projects", "companies"
   add_foreign_key "teams", "companies"
 end

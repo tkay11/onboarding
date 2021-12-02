@@ -1,0 +1,11 @@
+ru:
+  enumerize:
+    onboarding_step:
+      period:
+        first_day: Первый рабочий день
+        second_day: Второй рабочий день
+        third_day: Третий рабочий день
+        fourth_day: Четвёртый рабочий день
+        fifth_day: Пятый рабочий день
+        weekly: Еженедельно
+        third_week: Третья рабочая

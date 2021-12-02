@@ -1,1 +1,22 @@
 # Добавить сиды сюда
+
+onboarding_step1 = OnboardingStep.find_or_create_by(period: :first_day, name: 'Оформление на работу')
+onboarding_step1.tasks.find_or_create_by(name: 'Подписание трудового договора')
+onboarding_step1.tasks.find_or_create_by(name: 'Получение welcome pack')
+onboarding_step1.tasks.find_or_create_by(name: 'Отправка на адаптацию в виде таймлайна')
+onboarding_step1.tasks.find_or_create_by(name: 'Отправка данных о местоположении')
+onboarding_step1.tasks.find_or_create_by(name: 'Отправка контактов встречающего')
+onboarding_step1.tasks.find_or_create_by(name: 'Опрос по результатам приёма')
+
+onboarding_step2 = OnboardingStep.find_or_create_by(period: :first_day, name: 'Выход на рабочее место')
+onboarding_step3 = OnboardingStep.find_or_create_by(period: :first_day, name: 'Прохождение обязательных курсов и получение доступов')
+onboarding_step4 = OnboardingStep.find_or_create_by(period: :second_day, name: 'Знакомство с банком')
+onboarding_step5 = OnboardingStep.find_or_create_by(period: :second_day, name: 'Знакомство с блоком информационных технологий')
+onboarding_step6 = OnboardingStep.find_or_create_by(period: :third_day, name: 'Заполнение профиля сотрудника')
+onboarding_step7 = OnboardingStep.find_or_create_by(period: :third_day, name: 'Знакомство с подразделением или центром компетенций')
+onboarding_step8 = OnboardingStep.find_or_create_by(period: :fourth_day, name: 'Знакомство с продуктом/системой')
+onboarding_step9 = OnboardingStep.find_or_create_by(period: :fourth_day, name: 'Знакомство с проектом')
+onboarding_step10 = OnboardingStep.find_or_create_by(period: :fifth_day, name: 'Детальное знакомство с проектом, продуктами')
+onboarding_step11 = OnboardingStep.find_or_create_by(period: :fifth_day, name: 'Составление испытательного срока')
+onboarding_step12 = OnboardingStep.find_or_create_by(period: :weekly, name: 'Пульс адаптации')
+onboarding_step13 = OnboardingStep.find_or_create_by(period: :third_day, name: 'Мероприятия')
