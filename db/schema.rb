@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_02_200950) do
+ActiveRecord::Schema.define(version: 2021_12_02_200952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 2021_12_02_200950) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name"], name: "index_companies_on_name", unique: true
+  end
+
+  create_table "employee_onboarding_step_tasks", force: :cascade do |t|
+    t.bigint "employee_id", null: false
+    t.bigint "onboarding_step_task_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["employee_id"], name: "index_employee_onboarding_step_tasks_on_employee_id"
+    t.index ["onboarding_step_task_id"], name: "index_employee_onboarding_step_tasks_on_onboarding_step_task_id"
   end
 
   create_table "employee_tasks", force: :cascade do |t|
@@ -83,6 +92,13 @@ ActiveRecord::Schema.define(version: 2021_12_02_200950) do
     t.index ["name"], name: "index_projects_on_name", unique: true
   end
 
+  create_table "services", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_services_on_name", unique: true
+  end
+
   create_table "teams", force: :cascade do |t|
     t.bigint "company_id", null: false
     t.string "name"
@@ -93,6 +109,8 @@ ActiveRecord::Schema.define(version: 2021_12_02_200950) do
     t.index ["name"], name: "index_teams_on_name", unique: true
   end
 
+  add_foreign_key "employee_onboarding_step_tasks", "employees"
+  add_foreign_key "employee_onboarding_step_tasks", "onboarding_step_tasks"
   add_foreign_key "employee_tasks", "employees"
   add_foreign_key "employee_teams", "employees"
   add_foreign_key "employee_teams", "teams"
