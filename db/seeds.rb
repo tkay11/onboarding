@@ -9,7 +9,15 @@ onboarding_step1.tasks.find_or_create_by(name: 'Отправка контакт�
 onboarding_step1.tasks.find_or_create_by(name: 'Опрос по результатам приёма')
 
 onboarding_step2 = OnboardingStep.find_or_create_by(period: :first_day, name: 'Выход на рабочее место')
+onboarding_step2.tasks.find_or_create_by(name: 'Назначение наставника и знакомство')
+onboarding_step2.tasks.find_or_create_by(name: 'Знакомство с офисом')
+onboarding_step2.tasks.find_or_create_by(name: 'Ознакомление с должностной инструкцией')
+
 onboarding_step3 = OnboardingStep.find_or_create_by(period: :first_day, name: 'Прохождение обязательных курсов и получение доступов')
+onboarding_step3.tasks.find_or_create_by(name: 'Прохождение обязательного инструктажа')
+onboarding_step3.tasks.find_or_create_by(name: 'Оформление базовых доступов')
+onboarding_step3.tasks.find_or_create_by(name: 'Доступы к площадкам разработки и тестирования')
+
 onboarding_step4 = OnboardingStep.find_or_create_by(period: :second_day, name: 'Знакомство с банком')
 onboarding_step5 = OnboardingStep.find_or_create_by(period: :second_day, name: 'Знакомство с блоком информационных технологий')
 onboarding_step6 = OnboardingStep.find_or_create_by(period: :third_day, name: 'Заполнение профиля сотрудника')

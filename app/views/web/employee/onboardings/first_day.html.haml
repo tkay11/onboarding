@@ -1,0 +1,4 @@
+- @onboarding_steps.each do |step|
+  = step.tasks.order(created_at: :asc).find_each do |task|
+    %br
+    = task.name
