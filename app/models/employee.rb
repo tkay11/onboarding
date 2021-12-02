@@ -7,6 +7,8 @@ class Employee < ApplicationRecord
   has_many :teams, through: :employee_teams
   has_many :employee_onboarding_step_tasks, dependent: :destroy
   has_many :onboarding_step_tasks, through: :employee_onboarding_step_tasks
+  has_many :employee_services, dependent: :destroy
+  has_many :services, through: :employee_services
 
   validates :email, presence: true, uniqueness: { case_sensitive: false }
 
