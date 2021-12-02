@@ -1,0 +1,16 @@
+ru:
+  attributes:
+    id: Id
+    name: Название
+    description: Описание
+    slug: Slug
+    phone: Телефон
+    email: E-mail
+    password: Пароль
+    password_confirmation: Повтор пароля
+    state: Состояние
+    created_at: Дата и время создания
+    updated_at: Дата и время обновления
+
+  #activerecord:
+    #attributes:

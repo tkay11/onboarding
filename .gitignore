@@ -1,0 +1,56 @@
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore uploaded files in development
+/storage/*
+!/storage/.keep
+
+/docker/data/
+!/docker/data/.keep
+
+/node_modules
+/yarn-error.log
+
+/public/assets
+/public/backend/assets
+/public/uploads
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
+
+*.swp
+
+coverage
+
+/public/backend/apidocs/
+/public/apidocs/
+/public/swagger.json
+/public/uploads
+
+/vendor/cache
+
+# Ignore database dumps
+/db/*.sql
+
+# Ignore reports
+/reports_storage
+
+# Ignore IDEs
+.idea
+.vscode
+
+.DS_Store
