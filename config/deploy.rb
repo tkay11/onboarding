@@ -1,7 +1,7 @@
-server '178.57.218.118', roles: %i[web app db], primary: true
+server '37.143.14.55', roles: %i[web app db], primary: true
 
-set :repo_url,        'git@github.com:anatoliypronin/maps.git'
-set :application,     'maps'
+set :repo_url,        'git@github.com:anatoliypronin/onboarding.git'
+set :application,     'onboarding'
 set :user,            'root'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
