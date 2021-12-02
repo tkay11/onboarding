@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
     resources :employees, only: [:index]
     resources :knowledges, only: [:index]
+    resources :community, only: [:index]
+    resources :tasks, only: [:index]
 
     resources :polls do
       scope module: :polls do
