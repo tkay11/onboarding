@@ -9,3 +9,8 @@ ru:
         fifth_day: Пятый рабочий день
         weekly: Еженедельно
         third_week: Третья рабочая
+    employee:
+      role:
+        worker: Работник
+        mentor: Наставник
+        leader: Руководитель
