@@ -2,10 +2,7 @@ Rails.application.routes.draw do
   scope module: :web do
     root to: 'welcome#index'
 
-    namespace :admin do
-      root to: 'welcome#index'
-    end
-    namespace :company do
+    namespace :leader do
       root to: 'welcome#index'
     end
     namespace :employee do
