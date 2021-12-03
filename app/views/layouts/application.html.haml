@@ -33,11 +33,11 @@
                   %a.menu__link{href: community_index_path, class: ('menu__link--active' if current_page?(community_index_path))}
                     Сообщества
             .header__settings
-              %a.header__setting.header__user{href: dashboard_index_path}
-              %span.header__setting.header__notification
-                %span
-                  %svg{height: "34", viewbox: "0 0 24 34", width: "24", xmlns: "http://www.w3.org/2000/svg"}
-                    %use{"xlink:hre": "#notify"}
+              -#%a.header__setting.header__user{href: dashboard_index_path}
+              -#%span.header__setting.header__notification
+                -#%span
+                  -#%svg{height: "34", viewbox: "0 0 24 34", width: "24", xmlns: "http://www.w3.org/2000/svg"}
+                    -#%use{"xlink:hre": "#notify"}
               %span.header__setting.header__dialog
                 %span
                   %svg{height: "30", viewbox: "0 0 31 30", width: "31", xmlns: "http://www.w3.org/2000/svg"}
