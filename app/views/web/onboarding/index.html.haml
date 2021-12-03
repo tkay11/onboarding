@@ -1,4 +1,4 @@
-%h1 ПСБ. Начало
+%h1 ПСБ. #{@onboarding_step_task.onboarding_step.period_text}
 .map{data: {id: (@onboarding_step_task.position > 6 ? 1 : @onboarding_step_task.position), module: 'mapModal'}}
   - if @onboarding_step_task.position > 6
     = image_tag "Frame1.png"
