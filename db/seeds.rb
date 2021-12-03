@@ -4,12 +4,14 @@ company = Company.find_or_create_by(name: "ПСБ")
 employee = company.employees.find_or_create_by(firstname: "Альберт", lastname: "Абдрашитов", patronymic: "Мазитович",
                                     email: "albert@psbank.ru", phone: "+7 (903) 676-8494",
                                     location: "Москва, Дербеневская Набережная, д. 7, стр./корпус 22, подъезд А, 2 этаж, Open Space 1240, место 127",
-                                    position: "Главный специалист по работе с ключевыми клиентами", age: "32 года")
+                                    position: "Главный специалист по работе с ключевыми клиентами", age: "32 года",
+                                    departament: "Группа внутренних коммуникаций и развития корпоративной культуры / Департамент управления персоналом / Подразделения под Барыбина О.Г.")
 employee.update(password: "123456")
 employee = company.employees.find_or_create_by(firstname: "Василий", lastname: "Иванов", patronymic: "Олегович",
                                     email: "vasiliy@psbank.ru", phone: "+7 (987) 123-4567",
                                     location: "Санкт-Петербург",
-                                    position: "Руководитель backend-направления", age: "28 лет")
+                                    position: "Руководитель backend-направления", age: "28 лет",
+                                    departament: "Группа разработки, сопровождения и эксплуатации программного обеспечения в Поволжье")
 employee.update(password: "123456")
 
 onboarding_step1 = OnboardingStep.find_or_create_by(period: :first_day, name: 'Оформление на работу')
