@@ -26,18 +26,14 @@
                 %li.menu__item
                   %a.menu__link{href: about_index_path, class: ('menu__link--active' if current_page?(about_index_path))}
                     О банке
-                - if employee_signed_in?
-                  %li.menu__item
-                    %a.menu__link{href: employees_path, class: ('menu__link--active' if current_page?(employees_path))}
-                      Коллеги
                 %li.menu__item
                   %a.menu__link{href: knowledges_path, class: ('menu__link--active' if current_page?(knowledges_path))}
-                    Базы знаний
+                    База знаний
                 %li.menu__item
                   %a.menu__link{href: community_index_path, class: ('menu__link--active' if current_page?(community_index_path))}
                     Сообщества
             .header__settings
-              %a.header__setting.header__user{href: "#"}
+              %a.header__setting.header__user{href: dashboard_index_path}
               %span.header__setting.header__notification
                 %span
                   %svg{height: "34", viewbox: "0 0 24 34", width: "24", xmlns: "http://www.w3.org/2000/svg"}

@@ -34,6 +34,9 @@
       %a.menu__link{href: "#"}
         Задачи
     %li.menu__item
+      %a.menu__link{href: employees_path, class: ('menu__link--active' if current_page?(employees_path))}
+        Команда
+    %li.menu__item
       %a.menu__link{href: "#"}
         Льготы
     %li.menu__item
