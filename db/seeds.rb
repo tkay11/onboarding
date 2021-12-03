@@ -5,6 +5,10 @@ employee = company.employees.find_or_create_by(firstname: "Альберт", last
                                     email: "abdrashitovam@orenburg.psbank.ru", phone: "+7 (903) 676-8494",
                                     location: "Москва, Дербеневская Набережная, д. 7, стр./корпус 22, подъезд А, 2 этаж, Open Space 1240, место 127",
                                     position: "Главный специалист по работе с ключевыми клиентами", age: "32 года")
+employee = company.employees.find_or_create_by(firstname: "Василий", lastname: "Иванов", patronymic: "Олегович",
+                                    email: "vasiliy@psbank.ru", phone: "+7 (987) 123-4567",
+                                    location: "Санкт-Петербург",
+                                    position: "Руководитель backend-направления", age: "28 лет")
 
 onboarding_step1 = OnboardingStep.find_or_create_by(period: :first_day, name: 'Оформление на работу')
 onboarding_step1.tasks.find_or_create_by(name: 'Подписание трудового договора')

@@ -1,5 +1,5 @@
 class Web::ApplicationController < ApplicationController
   def current_employee
-    Employee.first
+    Employee.order(id: :asc).first
   end
 end

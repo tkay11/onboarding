@@ -1,22 +1,20 @@
-.panel
-  .user-card
-    .user-card__img
-      %img{:alt => "", :src => "/public/img/user.png"}/
-      %span.user-card__status
-    .user-card__body
-      %p.user-card__title
-        Абдрашитов Альберт Мазитович
-      %p.user-card__position
-        Главный специалист по работе с ключевыми клиентами
-      %a.user-card__segment{:href => "#"}
-        Группа внутренних коммуникаций и развития корпоративной культуры / Департамент управления персоналом / Подразделения под  Барыбина О.Г.
-    .user-card__about
-      %p.user-card__work-number
-        %span (71) 3729
-        %span (3812) 43-8484
-      %p.user-card__phone
-        +7 (903) 676-8494
-      %p.user-card__mail
-        abdrashitovam@orenburg.psbank.ru
-      %p.user-card__loccation
-        Москва, Дербеневская Набережная, д. 7, стр./корпус 22, подъезд А, 2 этаж, Open Space 1240, место 127
+- @employees.each do |employee|
+  .panel
+    .user-card
+      .user-card__img
+        %img{:alt => "", :src => "/public/img/user.png"}/
+        %span.user-card__status
+      .user-card__body
+        %p.user-card__title
+          = [employee.lastname, employee.firstname, employee.patronymic].join(' ')
+        %p.user-card__position
+          = employee.position
+        %a.user-card__segment{:href => "#"}
+          Группа внутренних коммуникаций и развития корпоративной культуры / Департамент управления персоналом / Подразделения под  Барыбина О.Г.
+      .user-card__about
+        %p.user-card__phone
+          = employee.phone
+        %p.user-card__mail
+          = employee.email
+        %p.user-card__loccation
+          = employee.location
