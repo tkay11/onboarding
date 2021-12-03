@@ -2,10 +2,7 @@ Rails.application.routes.draw do
   scope module: :web do
     root to: 'welcome#index'
 
-    namespace :leader do
-      root to: 'welcome#index'
-    end
-
+    resources :about, only: [:index]
     resources :employees, only: [:index]
     resources :knowledges, only: [:index]
     resources :community, only: [:index]
