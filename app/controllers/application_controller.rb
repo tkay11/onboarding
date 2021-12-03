@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   before_action :init_breadcrumbs
 
+  skip_before_action :verify_authenticity_token
+
   def init_breadcrumbs
     @breadcrumbs = [
       {url: '/', name: 'Главная'}

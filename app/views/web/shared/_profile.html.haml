@@ -17,3 +17,27 @@
         = current_employee.email
       %p.user-card__loccation
         = current_employee.location
+  %ul.menu.menu--top
+    %li.menu__item
+      %a.menu__link.menu__link--active{href: "#"}
+        Рабочий стол
+    %li.menu__item
+      %a.menu__link{href: "#"}
+        Профиль
+    %li.menu__item
+      %a.menu__link{href: "#"}
+        Адаптация
+    %li.menu__item
+      %a.menu__link{href: "#"}
+        Проект
+    %li.menu__item
+      %a.menu__link{href: "#"}
+        Задачи
+    %li.menu__item
+      %a.menu__link{href: "#"}
+        Льготы
+    %li.menu__item
+      %a.menu__link{href: "#"}
+        Полезные ссылки
+    %li.menu__item
+      = link_to "Выйти", session_path, method: :delete, class: "menu__link"

@@ -36,10 +36,6 @@
                 %li.menu__item
                   %a.menu__link{href: community_index_path, class: ('menu__link--active' if current_page?(community_index_path))}
                     Сообщества
-                - if employee_signed_in?
-                  %li.menu__item
-                    %a.menu__link{href: tasks_path, class: ('menu__link--active' if current_page?(tasks_path))}
-                      Задачи
             .header__settings
               %a.header__setting.header__user{href: "#"}
               %span.header__setting.header__notification
