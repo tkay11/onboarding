@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   scope module: :web do
     root to: 'welcome#index'
 
+    resources :onboarding, only: [:index]
     resources :about, only: [:index]
     resources :employees, only: [:index]
     resources :knowledges, only: [:index]
