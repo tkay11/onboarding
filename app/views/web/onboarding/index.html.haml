@@ -6,3 +6,8 @@
     = image_tag "Frame#{@onboarding_step_task.position}.png"
 
 = link_to "Далее", next_onboarding_path(@onboarding_step_task)
+
+.modals
+  .uk-modal{data: {modal: {id: (@onboarding_step_task.position > 6 ? 1 : @onboarding_step_task.position)}}}
+    .modal
+      .modal__content 123
