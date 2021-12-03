@@ -599,7 +599,7 @@ img {
       height: 24px;
       margin-top: -12px;
       margin-left: -12px;
-      background-image: url(images/search.svg);
+      background-image: asset-url('search.svg');
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover; }
@@ -637,7 +637,7 @@ img {
     display: block;
     width: 48px;
     height: 48px;
-    background: #E3E5E8 url(images/user.svg) center center no-repeat;
+    background: #E3E5E8 asset-url('user.svg') center center no-repeat;
     border-radius: 50%; }
 
 .breadcrumbs ul {
@@ -670,7 +670,7 @@ img {
       margin-top: -4px;
       width: 6px;
       height: 8px;
-      background: url(images/breadcrumbArrow.svg) center center no-repeat; }
+      background: asset-url('breadcrumbArrow.svg') center center no-repeat; }
 
 .panel {
   background: #FFFFFF;
@@ -868,13 +868,13 @@ img {
     display: inline-block;
     margin-right: 10px; }
   .user-card .user-card__about .user-card__work-number::before {
-    background: url(images/phone-station.svg) center center no-repeat; }
+    background: asset-url('phone-station.svg') center center no-repeat; }
   .user-card .user-card__about .user-card__phone::before {
-    background: url(images/phone-mobile.svg) center center no-repeat; }
+    background: asset-url('phone-mobile.svg') center center no-repeat; }
   .user-card .user-card__about .user-card__mail::before {
-    background: url(images/mail.svg) center center no-repeat; }
+    background: asset-url('mail.svg') center center no-repeat; }
   .user-card .user-card__about .user-card__location::before {
-    background: url(images/map-point.svg) center center no-repeat; }
+    background: asset-url('map-point.svg') center center no-repeat; }
 
 .checkbox {
   display: inline-block; }
@@ -892,7 +892,7 @@ img {
         left: 50%;
         width: 12px;
         height: 14px;
-        background: url(images/checked.svg) center 3px no-repeat;
+        background: asset-url('checked.svg') center 3px no-repeat;
         -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%); }
@@ -915,7 +915,7 @@ img {
     display: inline-block;
     width: 24px;
     height: 24px;
-    background: url(images/setting.svg) center center no-repeat; }
+    background: asset-url('setting.svg') center center no-repeat; }
   .table thead {
     font-size: 14px;
     color: #747F8B; }
@@ -938,7 +938,7 @@ img {
     width: 24px;
     height: 24px;
     display: block;
-    background: url(images/kebab.svg) center center no-repeat; }
+    background: asset-url('kebab.svg') center center no-repeat; }
   .table .table__sort {
     position: relative;
     padding-right: 16px; }
@@ -953,7 +953,7 @@ img {
       margin-top: -2px;
       width: 8px;
       height: 8px;
-      background: url(images/arrow.svg) center center no-repeat;
+      background: asset-url('arrow.svg') center center no-repeat;
       -webkit-transform: rotate(90deg);
           -ms-transform: rotate(90deg);
               transform: rotate(90deg); }
@@ -967,7 +967,7 @@ img {
       margin-top: -6px;
       width: 8px;
       height: 8px;
-      background: url(images/arrow.svg) center center no-repeat;
+      background: asset-url('arrow.svg') center center no-repeat;
       -webkit-transform: rotate(-90deg);
           -ms-transform: rotate(-90deg);
               transform: rotate(-90deg); }
@@ -1067,7 +1067,7 @@ img {
   height: 18px;
   border: none;
   outline: none;
-  background: url(images/kebab.svg) -9px center no-repeat;
+  background: asset-url('kebab.svg') -9px center no-repeat;
   position: relative;
   padding: 0;
   cursor: pointer; }
@@ -1075,7 +1075,7 @@ img {
     content: '';
     width: 12px;
     height: 18px;
-    background: url(images/kebab.svg) center center no-repeat;
+    background: asset-url('kebab.svg') center center no-repeat;
     display: block;
     position: relative;
     left: 4px; }
