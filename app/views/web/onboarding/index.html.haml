@@ -1,1 +1,6 @@
-= image_tag "Frame1"
+- if @onboarding_step_task.position > 6
+  = image_tag "Frame1.png"
+- else
+  = image_tag "Frame#{@onboarding_step_task.position}.png"
+
+= link_to "Далее", next_onboarding_path(@onboarding_step_task)

@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   scope module: :web do
     root to: 'welcome#index'
 
-    resources :onboarding, only: [:index]
+    resources :onboarding, only: [:index] do
+      get :next, on: :member
+    end
     resources :about, only: [:index]
     resources :dashboard, only: [:index]
     resources :employees, only: [:index]
