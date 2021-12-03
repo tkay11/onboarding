@@ -1,7 +1,17 @@
-= simple_form_for :employee, url: session_path do |f|
-  = f.input :email
-  = f.input :password
-  = f.button :submit, "Войти", class: "btn btn-info"
+.form-container.form-container--signup
+  .panel
+    .panel__inner
+      %p.panel__title
+        Авторизация
+      %form.form{:action => "/session", method: :post}
+        .input-wrap
+          %input{:name => "employee[email]", :placeholder => "Логин", :type => "text"}/
+        .input-wrap
+          %input{:name => "employee[password]", :placeholder => "Пароль", :type => "password"}/
+        .form__btns.form__btns--center
+          %button.btn.btn--primary{:type => "submit"} Войти
+  %span.symbol-icon
+    = image_tag "rabbit1.svg"
 
 %h1 Правила
 
