@@ -97,12 +97,13 @@ ActiveRecord::Schema.define(version: 2021_12_03_052131) do
 
   create_table "poll_answers", force: :cascade do |t|
     t.integer "poll_id"
-    t.integer "employer_id"
     t.json "data"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "poll_question_id"
     t.integer "timer"
+    t.string "title"
+    t.json "extra"
   end
 
   create_table "poll_questions", force: :cascade do |t|
@@ -114,6 +115,8 @@ ActiveRecord::Schema.define(version: 2021_12_03_052131) do
     t.string "placeholder"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "detailed_answer", default: false
+    t.boolean "required", default: true
   end
 
   create_table "polls", force: :cascade do |t|

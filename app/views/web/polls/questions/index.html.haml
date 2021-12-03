@@ -7,9 +7,9 @@
         = @poll.description
 
 %p
-  %b Questions:
+  %b Редактирование вопросов:
   = @poll_questions.count
 
-= render "list"
+= render "shared/questions/list"
 
 = link_to 'New question', new_poll_question_path(@poll)

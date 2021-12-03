@@ -10,6 +10,8 @@ class Web::PollsController < Web::ApplicationController
   # GET /polls/1
   def show
     add_breadcrumbs(polls_path, @poll.title)
+
+    @poll_questions = @poll.poll_questions
   end
 
   # GET /polls/new
@@ -27,7 +29,7 @@ class Web::PollsController < Web::ApplicationController
     @poll = Poll.new(poll_params)
 
     if @poll.save
-      redirect_to @poll, notice: 'Poll was successfully created.'
+      redirect_to poll_questions_path(poll_id: @poll.id), notice: 'Poll was successfully created.'
     else
       render :new
     end
@@ -51,7 +53,7 @@ class Web::PollsController < Web::ApplicationController
   private
 
   def set_poll
-    @poll = Poll.find(params[:id])
+    @poll = Poll.includes(poll_questions: :poll_answers).find(params[:id])
     add_breadcrumbs(polls_path, "Опросы")
   end
 

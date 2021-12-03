@@ -43,7 +43,7 @@ class Web::Polls::QuestionsController < Web::ApplicationController
   # DELETE /poll_questions/1
   def destroy
     @poll_question.destroy
-    redirect_to _poll_questions_url, notice: 'Poll question was successfully destroyed.'
+    redirect_to poll_question_path(@poll), notice: 'Poll question was successfully destroyed.'
   end
 
   private

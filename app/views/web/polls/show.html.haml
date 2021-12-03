@@ -1,16 +1,14 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @poll.title
-%p
-  %b Description
-  = @poll.description
-%p
-  %b Questions:
-  = @poll.poll_questions.count
+.panel
+  .user-card
+    .user-card__body
+      %p.user-card__title
+        = @poll.title
+      %p.user-card__position
+        = @poll.description
 
-= render partial: "polls/questions/list", poll_questions: @poll.poll_questions
+= render partial: "shared/questions/list", poll_questions: @poll.poll_questions
 
 = link_to 'Edit', edit_poll_path(@poll)
 \|

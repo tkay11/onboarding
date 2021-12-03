@@ -1,0 +1,5 @@
+- answers.each do |answer|
+  .p
+    %input{id: "radio_#{answer.poll_question_id}", name: answer.poll_question_id, type: "radio", value: answer.title}
+    %label{for: "radio_#{answer.poll_question_id}"}
+      =answer.title

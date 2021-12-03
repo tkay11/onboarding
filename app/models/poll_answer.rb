@@ -1,4 +1,3 @@
 class PollAnswer < ApplicationRecord
-  belongs_to :pool
-  belongs_to :employee
+  belongs_to :poll_question
 end
