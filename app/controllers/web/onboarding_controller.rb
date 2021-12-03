@@ -6,6 +6,7 @@ class Web::OnboardingController < Web::ProtectedApplicationController
                             else
                               OnboardingStep::Task.find_by(position: 1)
     end
+    add_breadcrumbs(onboarding_index_path, 'Адаптация')
   end
 
   def next

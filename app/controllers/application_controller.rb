@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
 
   def init_breadcrumbs
     @breadcrumbs = [
-      {url: '/', name: 'Главная'}
+      {url: (employee_signed_in? ? dashboard_index_path : root_path), name: 'Главная'}
     ]
   end
 

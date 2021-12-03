@@ -10891,7 +10891,7 @@ main {
       height: 24px;
       margin-top: -12px;
       margin-left: -12px;
-      background-image: url(images/search.svg);
+      background-image: asset-url('search.svg');
       background-position: center center;
       background-repeat: no-repeat;
       background-size: cover; }
@@ -10929,7 +10929,7 @@ main {
     display: block;
     width: 48px;
     height: 48px;
-    background: #E3E5E8 url(images/user.svg) center center no-repeat;
+    background: #E3E5E8 asset-url('user.svg') center center no-repeat;
     border-radius: 50%; }
 
 .breadcrumbs ul {
@@ -10962,7 +10962,7 @@ main {
       margin-top: -4px;
       width: 6px;
       height: 8px;
-      background: url(images/breadcrumb-arrow.svg) center center no-repeat; }
+      background: asset-url('breadcrumb-arrow.svg') center center no-repeat; }
 
 .panel {
   background: #FFFFFF;
