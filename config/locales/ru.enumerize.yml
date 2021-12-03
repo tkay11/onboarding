@@ -14,3 +14,7 @@ ru:
         worker: Работник
         mentor: Наставник
         leader: Руководитель
+    project:
+      kind:
+        agile: Agile
+        scrum: Scrum

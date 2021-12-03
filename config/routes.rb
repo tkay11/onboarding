@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :about, only: [:index]
     resources :dashboard, only: [:index]
     resources :employees, only: [:index]
+    resources :projects, only: [:index]
     resources :knowledges, only: [:index]
     resources :community, only: [:index]
     resources :tasks, only: [:index]

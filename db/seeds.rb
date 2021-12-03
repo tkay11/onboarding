@@ -1,6 +1,10 @@
 # Добавить сиды сюда
 company = Company.find_or_create_by(name: "ПСБ")
 
+project = company.projects.find_or_create_by(name: "Разработка программного решения для онбординга новых ИТ-специалистов банка", kind: :agile,
+                                            purpose: "сокращение срока адаптации нового сотрудника проекта с 3 месяцев до 1 месяца",
+                                            result: "Веб-приложение для сотрудников банка")
+
 employee = company.employees.find_or_create_by(firstname: "Альберт", lastname: "Абдрашитов", patronymic: "Мазитович",
                                     email: "albert@psbank.ru", phone: "+7 (903) 676-8494",
                                     location: "Москва, Дербеневская Набережная, д. 7, стр./корпус 22, подъезд А, 2 этаж, Open Space 1240, место 127",
