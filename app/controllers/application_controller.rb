@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   include AuthManagment
-  helper_method :employee_signed_in?
+  helper_method :employee_signed_in?, :current_employee
 
   before_action :init_breadcrumbs
 

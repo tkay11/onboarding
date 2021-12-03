@@ -19,25 +19,27 @@
       %main
         %header.header
           .header__inner
-            %a.header__logo{href: root_path}
+            %a.header__logo{href: employee_signed_in? ? dashboard_index_path : root_path}
               = image_tag("logo1.png")
             %nav.header__nav
               %ul.menu
                 %li.menu__item
                   %a.menu__link{href: about_index_path, class: ('menu__link--active' if current_page?(about_index_path))}
                     О банке
-                %li.menu__item
-                  %a.menu__link{href: employees_path, class: ('menu__link--active' if current_page?(employees_path))}
-                    Коллеги
+                - if employee_signed_in?
+                  %li.menu__item
+                    %a.menu__link{href: employees_path, class: ('menu__link--active' if current_page?(employees_path))}
+                      Коллеги
                 %li.menu__item
                   %a.menu__link{href: knowledges_path, class: ('menu__link--active' if current_page?(knowledges_path))}
                     Базы знаний
                 %li.menu__item
                   %a.menu__link{href: community_index_path, class: ('menu__link--active' if current_page?(community_index_path))}
                     Сообщества
-                %li.menu__item
-                  %a.menu__link{href: tasks_path, class: ('menu__link--active' if current_page?(tasks_path))}
-                    Задачи
+                - if employee_signed_in?
+                  %li.menu__item
+                    %a.menu__link{href: tasks_path, class: ('menu__link--active' if current_page?(tasks_path))}
+                      Задачи
             .header__settings
               %a.header__setting.header__user{href: "#"}
               %span.header__setting.header__notification

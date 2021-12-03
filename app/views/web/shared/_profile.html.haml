@@ -1,0 +1,19 @@
+.panel
+  .user-card
+    .user-card__img
+      = image_tag "user.png"
+      %span.user-card__status
+    .user-card__body
+      %p.user-card__title
+        = [current_employee.lastname, current_employee.firstname, current_employee.patronymic].join(' ')
+      %p.user-card__position
+        = current_employee.position
+      %a.user-card__segment{:href => "#"}
+        Группа внутренних коммуникаций и развития корпоративной культуры / Департамент управления персоналом / Подразделения под  Барыбина О.Г.
+    .user-card__about
+      %p.user-card__phone
+        = current_employee.phone
+      %p.user-card__mail
+        = current_employee.email
+      %p.user-card__loccation
+        = current_employee.location
