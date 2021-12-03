@@ -1,20 +1,22 @@
 - @employees.each do |employee|
   .panel
     .user-card
-      .user-card__img
-        %img{:alt => "", :src => "/public/img/user.png"}/
-        %span.user-card__status
-      .user-card__body
-        %p.user-card__title
-          = [employee.lastname, employee.firstname, employee.patronymic].join(' ')
-        %p.user-card__position
-          = employee.position
-        %a.user-card__segment{:href => "#"}
-          = employee.departament
-      .user-card__about
-        %p.user-card__phone
-          = employee.phone
-        %p.user-card__mail
-          = employee.email
-        %p.user-card__loccation
-          = employee.location
+      .user-card__inner
+        .user-card__left
+          .user-card__img
+            = image_tag "user.png"
+            %span.user-card__status
+          .user-card__body
+            %p.user-card__title
+              = [employee.lastname, employee.firstname, employee.patronymic].join(' ')
+            %p.user-card__position
+              = employee.position
+            %a.user-card__segment{:href => "#"}
+              = employee.departament
+        .user-card__about
+          %p.user-card__phone
+            = employee.phone
+          %p.user-card__mail
+            = employee.email
+          %p.user-card__loccation
+            = employee.location
