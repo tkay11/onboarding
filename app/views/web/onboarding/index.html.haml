@@ -5,9 +5,109 @@
   - else
     = image_tag "Frame#{@onboarding_step_task.position}.png"
 
-= link_to "Далее", next_onboarding_path(@onboarding_step_task)
-
 .modals
-  .uk-modal{data: {modal: {id: (@onboarding_step_task.position > 6 ? 1 : @onboarding_step_task.position)}}}
-    .modal
-      .modal__content 123
+  %div{"data-modal-id" => "1"}
+    .uk-flex-top.uk-modal.uk-flex.uk-open
+      .modal__content.modal__content--image.uk-modal-dialog
+        %button.uk-modal-close-default.uk-icon.uk-close{:type => "button", "uk-close" => ""}
+          %svg{:height => "14", :viewbox => "0 0 14 14", :width => "14", :xmlns => "http://www.w3.org/2000/svg"}
+            %line{:fill => "none", :stroke => "#000", "stroke-width" => "1.1", :x1 => "1", :x2 => "13", :y1 => "1", :y2 => "13"}
+            %line{:fill => "none", :stroke => "#000", "stroke-width" => "1.1", :x1 => "13", :x2 => "1", :y1 => "1", :y2 => "13"}
+        %p.modal__title
+          Привет друг!
+        .modal__body
+          %p
+            Знаю знаю, никто не любит бюрократию!
+            %br/
+            Но что поделать! 😣
+          %p
+            Сходи к своему HR и подпиши свой договор!
+            %br/
+            Договор гарантия соблюдения всех важных моментов,
+            %br/
+            а именно это своевременная выплата зарплаты.
+          %p
+            Кстати, твой HR сидит на четвертом этаже. Заходишь направо, потом еще раз направо
+            и вот она. Зовут её Оксана. Не бойся она не кусается.
+          %p
+            Как подпишешь договор приходи обратно и жми «далее»
+          .modal__buttons
+            %a.btn.btn--primary{:href => next_onboarding_path(@onboarding_step_task)} Далее
+  %div{"data-modal-id" => "2"}
+    .uk-flex-top.uk-modal.uk-flex.uk-open
+      .modal__content.modal__content--image.uk-modal-dialog
+        %button.uk-modal-close-default.uk-icon.uk-close{:type => "button", "uk-close" => ""}
+          %svg{:height => "14", :viewbox => "0 0 14 14", :width => "14", :xmlns => "http://www.w3.org/2000/svg"}
+            %line{:fill => "none", :stroke => "#000", "stroke-width" => "1.1", :x1 => "1", :x2 => "13", :y1 => "1", :y2 => "13"}
+            %line{:fill => "none", :stroke => "#000", "stroke-width" => "1.1", :x1 => "13", :x2 => "1", :y1 => "1", :y2 => "13"}
+        %p.modal__title
+          Привет это снова я!
+        .modal__body
+          %p
+            Договор подписан!
+            %br/
+            Ура!!!🎖
+          %p
+            Пришло время приятностей!
+            %br/
+            Время welcome pack’а !
+            %br/
+            Получить можно у той же Оксаны.
+            %br/
+            Надеюсь ты запомнил где она сидит.
+          %p
+            Четвертый этаж два раза направо и welcome pack твой!
+          .modal__buttons
+            %a.btn.btn--primary{:href => next_onboarding_path(@onboarding_step_task)} Ура! Welcome pack в кармане
+  %div{"data-modal-id" => "3"}
+    .uk-flex-top.uk-modal.uk-flex.uk-open
+      .modal__content.modal__content--image.uk-modal-dialog
+        %button.uk-modal-close-default.uk-icon.uk-close{:type => "button", "uk-close" => ""}
+          %svg{:height => "14", :viewbox => "0 0 14 14", :width => "14", :xmlns => "http://www.w3.org/2000/svg"}
+            %line{:fill => "none", :stroke => "#000", "stroke-width" => "1.1", :x1 => "1", :x2 => "13", :y1 => "1", :y2 => "13"}
+            %line{:fill => "none", :stroke => "#000", "stroke-width" => "1.1", :x1 => "13", :x2 => "1", :y1 => "1", :y2 => "13"}
+        %p.modal__title
+          Привет это снова я!
+        .modal__body
+          %p
+            Как тебе welcome pack?
+            %br/
+            Надеюсь он пришелся тебе по душе!
+          %p
+            Теперь время обратной связи.
+            %br/
+            Перейди на небольшой опросик снизу.
+            %br/
+            Расскажи как тебе прием в офисе? Все ли понравилось?
+            %br/
+            Поделись своими впечатлениями 🙂
+          %p
+            Вперёд, к заполнению!
+          .modal__buttons
+            %a.btn.btn--primary{:href => next_onboarding_path(@onboarding_step_task)} Пройти опрос
+  %div{"data-modal-id" => "4"}
+    .uk-flex-top.uk-modal.uk-flex.uk-open
+      .modal__content.modal__content--image.modal__content--office.uk-modal-dialog
+        %button.uk-modal-close-default.uk-icon.uk-close{:type => "button", "uk-close" => ""}
+          %svg{:height => "14", :viewbox => "0 0 14 14", :width => "14", :xmlns => "http://www.w3.org/2000/svg"}
+            %line{:fill => "none", :stroke => "#000", "stroke-width" => "1.1", :x1 => "1", :x2 => "13", :y1 => "1", :y2 => "13"}
+            %line{:fill => "none", :stroke => "#000", "stroke-width" => "1.1", :x1 => "13", :x2 => "1", :y1 => "1", :y2 => "13"}
+        %p.modal__title
+          Привет друг!
+        .modal__body
+          %p
+            Настал день икс!
+            %br/
+            Встреча с руководителем!
+          %p
+            Она пройдёт в переговорной комнате №4
+            %br/
+            на первом этаже
+          %p
+            На карте красным флажком можно посмотреть
+            %br/
+            где она находится, чтобы не потеряться.
+          %p
+            Встреча сегодня в 16:00, приходи заранее 😉
+          .modal__buttons
+            %a.btn.btn--primary{:href => next_onboarding_path(@onboarding_step_task)} Погнали
