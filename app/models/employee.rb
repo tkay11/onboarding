@@ -1,5 +1,6 @@
 class Employee < ApplicationRecord
   extend Enumerize
+  has_secure_password
 
   belongs_to :company
   has_many :tasks, dependent: :destroy, class_name: 'Employee::Task', foreign_key: :employee_id

@@ -1,4 +1,4 @@
-class Web::OnboardingController < Web::ApplicationController
+class Web::OnboardingController < Web::ProtectedApplicationController
   def index
   end
 end
