@@ -1,46 +1,48 @@
 .panel
   .user-card
-    .user-card__img
-      = image_tag "user.png"
-      %span.user-card__status
-    .user-card__body
-      %p.user-card__title
-        = [current_employee.lastname, current_employee.firstname, current_employee.patronymic].join(' ')
-      %p.user-card__position
-        = current_employee.position
-      %a.user-card__segment{:href => "#"}
-        = current_employee.departament
-    .user-card__about
-      %p.user-card__phone
-        = current_employee.phone
-      %p.user-card__mail
-        = current_employee.email
-      %p.user-card__loccation
-        = current_employee.location
-  %ul.menu.menu--top
-    %li.menu__item
-      %a.menu__link{href: dashboard_index_path, class: ('menu__link--active' if current_page?(dashboard_index_path))}
-        Рабочий стол
-    %li.menu__item
-      %a.menu__link{href: "#"}
-        Профиль
-    %li.menu__item
-      %a.menu__link{href: onboarding_index_path, class: ('menu__link--active' if current_page?(onboarding_index_path))}
-        Адаптация
-    %li.menu__item
-      %a.menu__link{href: projects_path, class: ('menu__link--active' if current_page?(projects_path))}
-        Проекты
-    %li.menu__item
-      %a.menu__link{href: "#"}
-        Задачи
-    %li.menu__item
-      %a.menu__link{href: employees_path, class: ('menu__link--active' if current_page?(employees_path))}
-        Команда
-    %li.menu__item
-      %a.menu__link{href: "#"}
-        Льготы
-    %li.menu__item
-      %a.menu__link{href: "#"}
-        Полезные ссылки
-    %li.menu__item
-      = link_to "Выйти", session_path, method: :delete, class: "menu__link"
+    .user-card__inner
+      .user-card__left
+        .user-card__img
+          = image_tag "user.png"
+          %span.user-card__status
+        .user-card__body
+          %p.user-card__title
+            = [current_employee.lastname, current_employee.firstname, current_employee.patronymic].join(' ')
+          %p.user-card__position
+            = current_employee.position
+          %a.user-card__segment{:href => "#"}
+            = current_employee.departament
+      .user-card__about
+        %p.user-card__phone
+          = current_employee.phone
+        %p.user-card__mail
+          = current_employee.email
+        %p.user-card__loccation
+          = current_employee.location
+    %ul.menu.menu--top
+      %li.menu__item
+        %a.menu__link{href: dashboard_index_path, class: ('menu__link--active' if current_page?(dashboard_index_path))}
+          Рабочий стол
+      %li.menu__item
+        %a.menu__link{href: "#"}
+          Профиль
+      %li.menu__item
+        %a.menu__link{href: onboarding_index_path, class: ('menu__link--active' if current_page?(onboarding_index_path))}
+          Адаптация
+      %li.menu__item
+        %a.menu__link{href: projects_path, class: ('menu__link--active' if current_page?(projects_path))}
+          Проекты
+      %li.menu__item
+        %a.menu__link{href: "#"}
+          Задачи
+      %li.menu__item
+        %a.menu__link{href: employees_path, class: ('menu__link--active' if current_page?(employees_path))}
+          Команда
+      %li.menu__item
+        %a.menu__link{href: "#"}
+          Льготы
+      %li.menu__item
+        %a.menu__link{href: "#"}
+          Полезные ссылки
+      %li.menu__item
+        = link_to "Выйти", session_path, method: :delete, class: "menu__link"

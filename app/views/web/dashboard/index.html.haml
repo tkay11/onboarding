@@ -1,1 +1,377 @@
 = render "web/shared/profile"
+
+.panel
+  .panel__header.panel__header--setting
+    %p.panel__title
+      Адаптация
+    .panel__settings
+      %button.settings-button
+  .tabs
+    %ul.uk-tab{"uk-tab" => ""}
+      %li.uk-active
+        %a{"aria-expanded" => "true", :href => "#"} 8 новые
+      %li
+        %a{"aria-expanded" => "false", :href => "#"} 2 выполнены
+    %ul.uk-switcher{:style => "touch-action: pan-y pinch-zoom;"}
+      %li.uk-active
+        %div
+          %table.table
+            %thead
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting
+                %td
+                  %span.table__sort
+                    Наименование
+                %td
+                  %span.table__sort.table__sort--reverse
+                    Дата исполнения
+                %td
+                  %span.table__sort.table__sort--reverse
+                    Постановщик
+                %td
+                  %span.table__sort.table__sort--reverse
+                    Статус
+            %tbody
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting-button
+                %td
+                  %span Завести заявку на подготовку рабочего места
+                %td
+                  %span 16 июля 18:00
+                %td
+                  %span.table__user
+                    %span.table__user-img
+                      %img{:alt => "", :src => "images/user.png"}/
+                    %span Белоусова Н. М.
+                %td
+                  %span.badge.badge--new
+                    Новое
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting-button
+                %td
+                  %span Завести заявку на подготовку рабочего места
+                %td
+                  %span 16 июля 18:00
+                %td
+                  %span.table__user
+                    %span.table__user-img
+                      %img{:alt => "", :src => "images/user.png"}/
+                    %span Белоусова Н. М.
+                %td
+                  %span.badge.badge--inwork
+                    В работе
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting-button
+                %td
+                  %span Завести заявку на подготовку рабочего места
+                %td
+                  %span 16 июля 18:00
+                %td
+                  %span.table__user
+                    %span.table__user-img
+                      %img{:alt => "", :src => "images/user.png"}/
+                    %span Белоусова Н. М.
+                %td
+                  %span.badge.badge--ready
+                    Завершено
+      %li
+
+.panel
+  .panel__header.panel__header--setting
+    %p.panel__title
+      Задачи
+    .panel__settings
+      %button.btn.btn--secondary
+        %span.btn__icon
+          %svg{:fill => "none", :height => "16", :viewbox => "0 0 16 16", :width => "16", :xmlns => "http://www.w3.org/2000/svg"}
+            %use{"xlink:href" => "#plus-icon"}
+        %span.btn__text
+          добавить задачу
+      %button.settings-button
+  .tabs
+    %ul.uk-tab{"uk-tab" => ""}
+      %li.uk-active
+        %a{"aria-expanded" => "true", :href => "#"} 8 новые
+      %li
+        %a{"aria-expanded" => "false", :href => "#"} 1 выполнена
+    %ul.uk-switcher{:style => "touch-action: pan-y pinch-zoom;"}
+      %li.uk-active
+        %div
+          %table.table
+            %thead
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting
+                %td
+                  %span
+                    Название
+                %td
+                  %span
+                    Крайний срок
+                %td
+                  %span
+                    Постановщик
+                %td
+                  %span
+                    Статус
+            %tbody
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting-button
+                %td
+                  %span.color-red Запись о приеме на работу Евгении Шамрай
+                %td
+                  %span 16 июля 18:00
+                %td
+                  %span.table__user
+                    %span.table__user-img
+                      %img{:alt => "", :src => "images/user.png"}/
+                    %span Белоусова Н. М.
+                %td
+                  %span.badge.badge--new
+                    Новое
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting-button
+                %td
+                  %span Завести заявку на подготовку рабочего места
+                %td
+                  %span 16 июля 18:00
+                %td
+                  %span.table__user
+                    %span.table__user-img
+                      %img{:alt => "", :src => "images/user.png"}/
+                    %span Белоусова Н. М.
+                %td
+                  %span.badge.badge--inwork
+                    В работе
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting-button
+                %td
+                  %span Завести заявку на подготовку рабочего места
+                %td
+                  %span 16 июля 18:00
+                %td
+                  %span.table__user
+                    %span.table__user-img
+                      %img{:alt => "", :src => "images/user.png"}/
+                    %span Белоусова Н. М.
+                %td
+                  %span.badge.badge--ready
+                    Завершено
+      %li
+        %table.table
+          %thead
+            %tr
+              %td
+                %label.checkbox
+                  %input{:name => "1", :type => "checkbox"}/
+                  %span.checkbox__icon
+              %td
+                %span.table__setting
+              %td
+                %span
+                  Название
+              %td
+                %span
+                  Крайний срок
+              %td
+                %span
+                  Постановщик
+              %td
+                %span
+                  Статус
+          %tbody
+            %tr
+              %td
+                %label.checkbox
+                  %input{:name => "1", :type => "checkbox"}/
+                  %span.checkbox__icon
+              %td
+                %span.table__setting-button
+              %td
+                %span Запись о приеме на работу Евгении Шамрай
+              %td
+                %span 16 июля 18:00
+              %td
+                %span.table__user
+                  %span.table__user-img
+                    %img{:alt => "", :src => "images/user.png"}/
+                  %span Белоусова Н. М.
+              %td
+                %span.badge.badge--new
+                  Новое
+
+.panel
+  .panel__header.panel__header--setting
+    %p.panel__title
+      Услуги
+    .panel__settings
+      %button.settings-button
+  .tabs
+    %ul.uk-tab{"uk-tab" => ""}
+      %li.uk-active
+        %a{"aria-expanded" => "true", :href => "#"} 8 новые
+      %li
+        %a{"aria-expanded" => "false", :href => "#"} 1 выполнена
+    %ul.uk-switcher{:style => "touch-action: pan-y pinch-zoom;"}
+      %li.uk-active
+        %div
+          %table.table
+            %thead
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting
+                %td
+                  %span
+                    Название
+                %td
+                  %span
+                    Крайний срок
+                %td
+                  %span
+                    Постановщик
+                %td
+                  %span
+                    Статус
+            %tbody
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting-button
+                %td
+                  %span Подключение интернета на корпоративном сотовом номере
+                %td
+                  %span 16 июля 18:00
+                %td
+                  %span.table__user
+                    %span.table__user-img
+                      %img{:alt => "", :src => "images/user.png"}/
+                    %span Белоусова Н. М.
+                %td
+                  %span.badge.badge--new
+                    Новое
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting-button
+                %td
+                  %span Предоставление мобильных средств связи (ФИЛИАЛЫ)
+                %td
+                  %span —
+                %td
+                  %span.table__user
+                    %span.table__user-img
+                      %img{:alt => "", :src => "images/user.png"}/
+                    %span Белоусова Н. М.
+                %td
+                  %span.badge.badge--inwork
+                    В работе
+              %tr
+                %td
+                  %label.checkbox
+                    %input{:name => "1", :type => "checkbox"}/
+                    %span.checkbox__icon
+                %td
+                  %span.table__setting-button
+                %td
+                  %span Переезд сотрудников на новое рабочее место (внутренний ПСБ)
+                %td
+                  %span —
+                %td
+                  %span.table__user
+                    %span.table__user-img
+                      %img{:alt => "", :src => "images/user.png"}/
+                    %span Белоусова Н. М.
+                %td
+                  %span.badge.badge--ready
+                    Завершено
+      %li
+        %table.table
+          %thead
+            %tr
+              %td
+                %label.checkbox
+                  %input{:name => "1", :type => "checkbox"}/
+                  %span.checkbox__icon
+              %td
+                %span.table__setting
+              %td
+                %span
+                  Название
+              %td
+                %span
+                  Крайний срок
+              %td
+                %span
+                  Постановщик
+              %td
+                %span
+                  Статус
+          %tbody
+            %tr
+              %td
+                %label.checkbox
+                  %input{:name => "1", :type => "checkbox"}/
+                  %span.checkbox__icon
+              %td
+                %span.table__setting-button
+              %td
+                %span Запись о приеме на работу Евгении Шамрай
+              %td
+                %span 16 июля 18:00
+              %td
+                %span.table__user
+                  %span.table__user-img
+                    %img{:alt => "", :src => "images/user.png"}/
+                  %span Белоусова Н. М.
+              %td
+                %span.badge.badge--new
+                  Новое
