@@ -19,13 +19,13 @@
         = current_employee.location
   %ul.menu.menu--top
     %li.menu__item
-      %a.menu__link.menu__link--active{href: "#"}
+      %a.menu__link{href: dashboard_index_path, class: ('menu__link--active' if current_page?(dashboard_index_path))}
         Рабочий стол
     %li.menu__item
       %a.menu__link{href: "#"}
         Профиль
     %li.menu__item
-      %a.menu__link{href: "#"}
+      %a.menu__link{href: onboarding_index_path, class: ('menu__link--active' if current_page?(onboarding_index_path))}
         Адаптация
     %li.menu__item
       %a.menu__link{href: "#"}
